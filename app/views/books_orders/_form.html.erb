@@ -1,0 +1,30 @@
+<%= form_with(model: books_order) do |form| %>
+<% if books_order.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(books_order.errors.count, "error") %> prohibited this books_order from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% books_order.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :book_id, class: label_class %>
+          <%= form.text_field :book_id, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :order_id, class: label_class %>
+          <%= form.text_field :order_id, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if books_order.persisted? %>
+<%= link_to "Cancel", books_order, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", books_orders_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

@@ -1,0 +1,45 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Customer</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to customers_path, class: button_class(theme: "transparent") do %>
+      All Customers
+      <% end %>
+      <%= link_to edit_customer_path(@customer), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">First name:</p>
+        <p><%= @customer.first_name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Last name:</p>
+        <p><%= @customer.last_name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Title:</p>
+        <p><%= @customer.title %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Email:</p>
+        <p><%= @customer.email %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Visits:</p>
+        <p><%= @customer.visits %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Orders count:</p>
+        <p><%= @customer.orders_count %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Lock version:</p>
+        <p><%= @customer.lock_version %></p>
+      </li>
+  </ul>
+</div>

@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require_relative File.join(__dir__,'seeders', 'csv_data_loader')
+
+CSVDataLoader.load_csv_data

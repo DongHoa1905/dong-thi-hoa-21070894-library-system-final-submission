@@ -1,0 +1,49 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Book</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to books_path, class: button_class(theme: "transparent") do %>
+      All Books
+      <% end %>
+      <%= link_to edit_book_path(@book), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Title:</p>
+        <p><%= @book.title %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Year published:</p>
+        <p><%= @book.year_published %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Isbn:</p>
+        <p><%= @book.isbn %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Price:</p>
+        <p><%= @book.price %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Out of print:</p>
+        <p><%= @book.out_of_print %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Views:</p>
+        <p><%= @book.views %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Author:</p>
+        <p><%= @book.author %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Supplier:</p>
+        <p><%= @book.supplier %></p>
+      </li>
+  </ul>
+</div>
