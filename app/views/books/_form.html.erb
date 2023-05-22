@@ -37,7 +37,7 @@
       </div>
   <div class="mb-6">
         <%= form.label :author_id, class: label_class %>
-          <%= form.text_field :author_id, class: input_class %>
+        <%= form.select :author_id, options_from_collection_for_select(Author.all, 'id', 'first_name', selected = book.author_id), class: label_class %>
       </div>
   <div class="mb-6">
         <%= form.label :supplier_id, class: label_class %>

@@ -39,11 +39,11 @@
       </li>
       <li>
         <p class="font-semibold">Author:</p>
-        <p><%= @book.author %></p>
+        <p><%= @book.author.first_name %></p>
       </li>
       <li>
         <p class="font-semibold">Supplier:</p>
-        <p><%= @book.supplier %></p>
+        <p><%= @book.supplier.name %></p>
       </li>
   </ul>
 </div>
